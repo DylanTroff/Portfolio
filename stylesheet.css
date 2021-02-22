@@ -13,6 +13,9 @@ body{
 }
 
 .navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,36 +70,6 @@ body{
     
 }
 
-@media (max-width: 600px){
-    .toggle-button{
-        display: flex;
-    }
-    .navbar-links {
-        display: none;
-        width: 100%
-    }
-    
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navbar-links ul{
-        width: 100%;
-        flex-direction: column;
-    }
-    
-    .navbar-links li {
-        text-align: center;
-    }
-    
-    .navbar-links li a {
-        padding: .5rem 1rem;
-    }
-    
-    .navbar-links.active{
-        display: flex;
-    }
-}
 
 
 .wrapper{
@@ -140,22 +113,6 @@ header {
     transform: scale(1.2);
 }
 
-@media (max-width: 1000px){
-    .kolommen{
-       display: flex;
-        flex-flow: column;
-        margin: 50px 40px;
-    }
-    header{
-        font-size: 2em;
-    }
-    .lijnen{
-        display: none;
-    }
-    .foto{
-        max-width: 90%;
-    }
-}
 
 .lijnen{
     position: relative;
@@ -344,7 +301,7 @@ a{
 }
 .foto{
     max-width: 80%;
-    max-height:400px;
+    max-height:300px;
     margin: 25px;
     border: 2px solid #66FCF1;
     
@@ -352,13 +309,15 @@ a{
 
 .fotonico{
     max-width: 70%;
+    max-height: 600px;
     margin: 25px;
     border: 2px solid #66FCF1;
     
 }
 
 .fotopro{
-    max-width: 50%;
+    max-width: 60%;
+    max-height: 700px;
     margin: 25px;
     border: 2px solid #66FCF1;
     
@@ -390,4 +349,90 @@ a{
 
 .content{
     margin:2%;
+}
+
+@media (max-width: 600px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .navbar-links li {
+        text-align: center;
+    }
+    
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    
+    .navbar-links.active{
+        display: flex;
+    }
+    .foto{
+        max-height:20%;
+        margin: 25px;
+        border: 2px solid #66FCF1;
+        
+    }
+    .fotopro{
+        max-width: 60%;
+        max-height: 600px;
+        margin: 25px;
+        border: 2px solid #66FCF1;
+        
+    }
+
+    .content{
+        margin:2%;
+        display: flex;
+    }
+
+}
+
+@media (max-width: 1000px){
+    .kolommen{
+       display: flex;
+        flex-flow: column;
+        margin: 50px 40px;
+    }
+    header{
+        font-size: 2em;
+    }
+    .lijnen{
+        display: none;
+    }
+    .foto{
+        max-width: 80%;
+        max-height:200px;
+        margin: 25px;
+        border: 2px solid #66FCF1;
+        
+    }
+
+    .fotonico{
+        max-width: 70%;
+        max-height: 300px;
+        margin: 25px;
+        border: 2px solid #66FCF1;
+        
+    }
+    .fotopro{
+        max-width: 60%;
+        max-height: 500px;
+        margin: 25px;
+        border: 2px solid #66FCF1;
+        
+    }
 }

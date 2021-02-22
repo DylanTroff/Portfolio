@@ -344,6 +344,7 @@ a{
 }
 .foto{
     max-width: 80%;
+    max-height:400px;
     margin: 25px;
     border: 2px solid #66FCF1;
     

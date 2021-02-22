@@ -1,0 +1,392 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: courier new;
+    background:#1f2833;
+    height: 100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0B0C10;
+}
+
+.brand-title{
+    font-size:  2em;
+    margin: .5em;
+    color:#66FCF1;
+}
+
+.navbar-links ul{
+    font-size: 1.2em;
+    margin:0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+    
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color: #66FCF1;
+    padding: 1em;
+    display: block;
+}
+
+.navbar-links li:hover{
+    background-color: #777;
+}
+
+.toggle-button{
+    position: absolute;
+    top: 1.5em;
+    right: 1em;
+    display: None;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: #66FCF1;
+    border-radius:10px;
+    
+}
+
+@media (max-width: 600px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .navbar-links li {
+        text-align: center;
+    }
+    
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    
+    .navbar-links.active{
+        display: flex;
+    }
+}
+
+
+.wrapper{
+    padding: .1em;
+    max-width: 960px;
+    width: 95%;
+    margin: 1em auto;
+    font-family: courier new;
+}
+
+header {
+    padding: 0 10px;
+    text-align: center;
+    font-size: 2.8em;
+    color: #66FCF1;
+    font-family: impact;
+    text-transform: uppercase ;
+    
+    
+}
+
+.kolommen{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px -60px;
+}
+
+.kolom{
+    flex: 1;
+    border: 1em solid #1F2833;
+    margin 1em;
+    padding 10px;
+    background: #C5C5C7;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.kolom:hover{
+    background-color: #45A29E;
+    transform: scale(1.2);
+}
+
+@media (max-width: 1000px){
+    .kolommen{
+       display: flex;
+        flex-flow: column;
+        margin: 50px 40px;
+    }
+    header{
+        font-size: 2em;
+    }
+    .lijnen{
+        display: none;
+    }
+    .foto{
+        max-width: 90%;
+    }
+}
+
+.lijnen{
+    position: relative;
+    
+    height: 20em;
+}
+
+.lijn1{
+    position: absolute;
+    overflow: hidden;
+    bottom: 5%;
+    left: 25%;
+    height: 10em;
+    width:26em;
+    border: .6em solid #45A29E;
+    
+    animation-name: animatiel1;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes animatiel1 {
+    0%{
+    border: .6em solid #45A29E;
+    height: 10em;
+    width:26em;
+    }
+    50%{
+    border: .4em solid #66FCF1; 
+    height: 8em;
+    width:26em;
+    }
+    100%{
+    border: .6em solid #45A29E;
+    height: 10em;
+    width:26em;
+    }
+}
+
+.lijn2{
+    position: absolute;
+    overflow: hidden;
+    bottom: 20%;
+    left: 40%;
+    height: 16em;
+    width:18em;
+    border: .4em solid #66FCF1;
+    
+    animation-name: animatiel2;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    
+}
+
+@keyframes animatiel2 {
+    0%{
+    border: .4em solid #66FCF1;
+    height: 16em;
+    width:18em;
+    }
+    50%{
+    border: .2em solid #45A29E; 
+    height: 16em;
+    width:20em;
+    }
+    100%{
+    border: .4em solid #66FCF1;
+    height: 16em;
+    width:18em;
+    }
+}
+
+.lijn3{
+    position: absolute;
+    overflow: hidden;
+    bottom: 18%;
+    left: 48%;
+    height: 12em;
+    width:24em;
+    border: .2em solid #45A29E;
+    
+    animation-name: animatiel3;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes animatiel3{
+    0%{
+    border: .2em solid #45A29E;
+    }
+    50%{
+    border: .7em solid #66FCF1;
+    }
+    100%{
+    border: .2em solid #45A29E;
+    }
+}
+
+.lijn4{
+    position: absolute;
+    overflow: hidden;
+    bottom: 10%;
+    left: 60%;
+    height: 15em;
+    width:15em;
+    border: 1em solid #66FCF1;
+    
+    animation-name: animatiel4;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animatiel4{
+    0%{
+    height: 15em;
+    width:15em;
+    border: 1em solid #66FCF1;
+    }
+    50%{
+    height: 15em;
+    width:15em;
+    border: .1em solid #66FCF1;
+    }
+    100%{
+    height: 15em;
+    width:15em;
+    border: 1em solid #66FCF1;
+    }
+}
+
+.huidig{
+    text-decoration:underline;
+}
+
+.intro{
+    flex: 1;
+    border: 1em solid #1F2833;
+    margin 1em;
+    padding 10px;
+    background: #C5C5C7;
+    transition: 0.3s;
+    text-align: center;
+}
+
+
+.kolommen_front{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px -60px;
+}
+
+.kolom_front{
+    flex: 1;
+    border: 1em solid #1F2833;
+    margin 1em;
+    padding 10px;
+    background: #C5C5C7;
+    transition: 0.3s;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.linknico{
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+.foto{
+    max-width: 80%;
+    margin: 25px;
+    border: 2px solid #66FCF1;
+    
+}
+
+.fotonico{
+    max-width: 70%;
+    margin: 25px;
+    border: 2px solid #66FCF1;
+    
+}
+
+.fotopro{
+    max-width: 50%;
+    margin: 25px;
+    border: 2px solid #66FCF1;
+    
+}
+
+.contain{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contain .card{
+    position: relative;
+    max-width: 100%;
+    background:#C5C5C7;
+    display: flex;
+    padding: 10px;;
+}
+
+.imgBx{
+    max-width: 50%;
+}
+.profielfoto{
+    max-width: 100%;
+    border: 2px solid black;
+}
+
+.content{
+    margin:2%;
+}
